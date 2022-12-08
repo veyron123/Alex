@@ -72,6 +72,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"global": "^4.4.0",
 		"simplebar": "latest"
 	}
 }
