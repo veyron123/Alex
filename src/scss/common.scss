@@ -1,1 +1,41 @@
 // Заголовки, загальні БЕМ блоки та інше...
+
+.button {
+	display: inline-flex;
+	padding: 15px 23px;
+	border: 1px solid #F1F1F1;
+	border-radius: 8px;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #fff;
+		}
+	}
+	&._fw {
+		width: 100%;
+	}
+}
+
+.titile-block {
+
+    &__label {
+        font-weight: 500;
+        font-size: rem(12);
+        line-height: math.div(24 ,12 );
+        letter-spacing: em(12,24);
+        color: $greyColor;
+        
+    }
+
+    &__value {
+        font-family: ;
+        
+    }
+
+    &__value span {
+        color: $purpleColor;
+    }
+}
+
+
+
+
