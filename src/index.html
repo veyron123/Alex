@@ -6,10 +6,151 @@
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main class="page">
+			<main data-fp data-fp-bullets class="page">
+				<section data-fp-section class="page__intro intro">
+					<div class="intro__container">
+						<div class="intro__content content-intro">
+							<div class="content-intro__title-block title-block">
+								<div class="title-block__label">MY NAME IS</div>
+								<h2 class="title-block__value">Alex<span> Smith.<span></h2>
+							</div>
+							<p class="content-intro__text">Creative front-end developer with more than +5 years of experience in enterprise companies and startups. Proficient in JavaScript, Angular, and React. Passionate about UI/UX</p>
+							<ul class="content-intro__icons">
+								<li class="content-intro__icon"><a href="#" class="content-intro _icon-s-Instagram"></a></li>
+								<li class="content-intro__icon"><a href="#" class="content-intro _icon-s-Github"></a></li>
+								<li class="content-intro__icon"><a href="#" class="content-intro _icon-s-Twitter"></a></li>
+								<li class="content-intro__icon"><a href="#" class="content-intro _icon-s-LinkedIn"></a></li>
+							</ul>
+						</div>
+						<div class="intro__decor decor-intro">
+							<div class="decor-intro__body">
+								<div class="decor-intro__image">
+									<img src="@img/Intro/photo.png" alt="photo">
+								</div>
+							</div>
+						</div>				
+					</div>
+				</section>
+				<section data-fp-section class="page__services services">
+					<div class="services__container __container">
+						<div class="services__title-block title-block">
+							<div class="title-block__label">SERVICES</div>
+							<h2 class="title-block__value">Specialized in</h2>
+						</div>
+						<div class="services__items">
+							<article class="services__item item-services">
+								<div class="item-services__icon">
+									<img src="@img/Services-icons/crown.svg" alt="">
+								</div>
+								<h2 class="item-services__title">UI/UX Design</h2>
+								<div class="item-services__text">Turn what you have in mind of a digital product into reality. For any platform you consider. </div>
+							</article>
+							<article class="services__item item-services">
+								<div class="item-services__icon">
+									<img src="@img/Services-icons/App.svg" alt="">
+								</div>
+								<h2 class="item-services__title">Application Development</h2>
+								<div class="item-services__text">Standard designing, building, and implementing your applications with documentation.
+								</div>
+							</article>
+							<article class="services__item item-services">
+								<div class="item-services__icon">
+									<img src="@img/Services-icons/globe.svg" alt="">
+								</div>
+								<h2 class="item-services__title">Web Development</h2>
+								<div class="item-services__text">Create and maintain your websites and also take care of its performance and traffic capacity.</div>
+							</article>
+						</div>						
+					</div>
+				</section>
+				<section data-fp-section class="page__portfolio portfolio">
+					<div class="portfolio__container __container">
+						<div class="portfolio__top">
+							<div class="portfolio__title-block title-block">
+								<div class="title-block__label">MY WORKS</div>
+								<h2 class="title-block__value">Featured Portfolios</h2>
+							</div>
+							<div class="portfolio__slider-buttons slider-button">
+								<button type="button" class="slider-button__left
+								">
+								<svg class="slider-button_left" class width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10 17L15 12L10 7" stroke="#7E74F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								</button>
+								<button type="button" class="slider-button__right 
+								">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10 17L15 12L10 7" stroke="#7E74F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</div>
+						</div>			
+						
+					</div>
+					<div class="portfolio__items">
+						<article class="portfolio__item item-portfolio">
+							<a class="item-portfolio__image">
+								<img src="@img" alt="">
+							</a>
+							<div class="item-portfolio__content">
+								<h3 class="item-portfolio__title">Agency Website.</h3>
+								<div class="item-portfolio__control control">
+									<a href="" class="control__button">WordPress</a>
+									<a href="" class="control__link_icon-Link:before" ></a>
+								</div>
+							</div>
+						</article>
+						<article class="portfolio__item item-portfolio">
+							<a class="item-portfolio__image">
+								<img src="@img" alt="">
+							</a>
+							<div class="item-portfolio__content">
+								<h3 class="item-portfolio__title">Dashboard Website.</h3>
+								<div class="item-portfolio__control control">
+									<a href="" class="control__button">React</a>
+									<a href="" class="control__link_icon-Link:before" ></a>
+								</div>
+							</div>
+						</article>
+						<article class="portfolio__item item-portfolio">
+							<a class="item-portfolio__image">
+								<img src="@img" alt="">
+							</a>
+							<div class="item-portfolio__content">
+								<h3 class="item-portfolio__title">Support Center Website.</h3>
+								<div class="item-portfolio__control control">
+									<a href="" class="control__button">PHP</a>
+									<a href="" class="control__link_icon-Link:before" ></a>
+								</div>
+							</div>
+						</article>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
 		@@include('html/_js.htm',{})
 	</body>
 </html>
+
+<!-- Оболочка слайдера -->
+<div class="имя-блока__slider swiper">
+	<!-- Двигающееся часть слайдера -->
+	<div class="имя-блока__wrapper swiper-wrapper">
+		<!-- Слайд -->
+		<div class="имя-блока__slide swiper-slide"></div>
+	</div>
+	<!-- Если нужна пагинация -->
+	<div class="swiper-pagination"></div>
+	<!-- Если нужна навигация (влево/вправо) -->
+	<button type="button" class="swiper-button-prev"></button>
+	<button type="button" class="swiper-button-next"></button>
+	<!-- Если нужен скролбар -->
+	<div class="swiper-scrollbar"></div>
+</div>
+
+<div class="имя-блока__slider swiper">
+	<div class="имя-блока__wrapper swiper-wrapper">
+		<div class="имя-блока__slide swiper-slide"></div>
+	</div>
+</div>

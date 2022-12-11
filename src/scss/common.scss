@@ -1,5 +1,15 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
+.__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 100vh;
+    @include adaptiveValue("padding-top", 123, 60);
+   
+}
+
 .button {
 	display: inline-flex;
 	padding: 15px 23px;
@@ -15,20 +25,39 @@
 	}
 }
 
-.titile-block {
+.title-block {
 
     &__label {
+        display: flex;
+        align-items: center;
+        gap: rem(16);
+
+        text-transform: uppercase;
         font-weight: 500;
         font-size: rem(12);
         line-height: math.div(24 ,12 );
         letter-spacing: em(12,24);
         color: $greyColor;
+
+        &:not(:last-child) {@include adaptiveValue("margin-bottom",16,0);}
+
+
+        &::before{
+            content:'';
+            width: 16px;
+            height: 2px;
+            background: #D9D9D9;
+            
+        }
         
     }
 
     &__value {
-        font-family: ;
-        
+        font-family: $fontJakarta;
+        font-weight: 700;
+        font-size: 44px;
+        @include adaptiveValue("font-size",44,34);
+        line-height: 55px;
     }
 
     &__value span {
