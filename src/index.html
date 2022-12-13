@@ -6,7 +6,7 @@
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main data-fp data-fp-bullets class="page">
+			<main data-fp  class="page"> 
 				<section data-fp-section class="page__intro intro">
 					<div class="intro__container">
 						<div class="intro__content content-intro">
@@ -63,7 +63,7 @@
 						</div>						
 					</div>
 				</section>
-				<section data-fp-section class="page__portfolio portfolio">
+				<div data-fp-section class="page__portfolio portfolio">
 					<div class="portfolio__container __container">
 						<div class="portfolio__top">
 							<div class="portfolio__title-block title-block">
@@ -79,52 +79,96 @@
 								</button>
 								<button type="button" class="slider-button__right 
 								">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M10 17L15 12L10 7" stroke="#7E74F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
+								</svg>
 								</button>
 							</div>
-						</div>			
+						</div>
 						
-					</div>
-					<div class="portfolio__items">
-						<article class="portfolio__item item-portfolio">
-							<a class="item-portfolio__image">
-								<img src="@img" alt="">
-							</a>
-							<div class="item-portfolio__content">
-								<h3 class="item-portfolio__title">Agency Website.</h3>
-								<div class="item-portfolio__control control">
-									<a href="" class="control__button">WordPress</a>
-									<a href="" class="control__link_icon-Link:before" ></a>
+							<!-- Оболочка слайдера -->
+							<div class="portfolio__slider swiper">
+								<!-- Двигающееся часть слайдера -->
+								<div class="portfolio__wrapper swiper-wrapper">
+									<!-- Слайд -->
+									<div class="portfolio__slide swiper-slide">
+										<article class="portfolio__item item-portfolio">
+											<a class="item-portfolio__image-ibg">
+												<img src="@img/Portfolio/Portfolio item.jpg" alt="">
+											</a>
+											<div class="item-portfolio__content">
+												<a class="item-portfolio__title">Agency Website.</a>
+
+													<a href="" class="item-portfolio__control-button button">WordPress</a>
+													<a href="" class="item-portfolio__control-link _icon-Link" ></a>
+
+											</div>
+										</article>																		
+									</div>
+									<div class="portfolio__slide swiper-slide">
+										<article class="portfolio__item item-portfolio">
+											<a class="item-portfolio__image-ibg">
+												<img src="@img/Portfolio/Portfolio item (2).jpg" alt="">
+											</a>
+											<div class="item-portfolio__content">
+												
+													<a class="item-portfolio__title">Support Center Website.</a>
+												
+
+													<a href="" class="item-portfolio__control-button button">PHP</a>
+													<a href="" class="item-portfolio__control-link _icon-Link" ></a>													
+
+											</div>
+										</article>
+									</div>
+									<div class="portfolio__slide swiper-slide">
+										<article class="portfolio__item item-portfolio">
+											<a class="item-portfolio__image-ibg">
+												<img src="@img/Portfolio/Portfolio item (2).jpg" alt="">
+											</a>
+											<div class="item-portfolio__content">
+												
+													<a class="item-portfolio__title">Support Center Website.</a>
+												
+
+													<a href="" class="item-portfolio__control-button button">PHP</a>
+													<a href="" class="item-portfolio__control-link _icon-Link" ></a>													
+
+											</div>
+										</article>
+									</div>
+									<div class="portfolio__slide swiper-slide">
+										<article class="portfolio__item item-portfolio">
+											<a class="item-portfolio__image-ibg">
+												<img src="@img/Portfolio/Portfolio item (2).jpg" alt="">
+											</a>
+											<div class="item-portfolio__content">
+												
+													<a class="item-portfolio__title">Support Center Website.</a>
+												
+
+													<a href="" class="item-portfolio__control-button button">PHP</a>
+													<a href="" class="item-portfolio__control-link _icon-Link" ></a>													
+
+											</div>
+										</article>
+									</div>
+
+
 								</div>
+								<!-- Если нужна пагинация -->
+								<div class="swiper-pagination"></div>
+								<!-- Если нужна навигация (влево/вправо) -->
+								<button type="button" class="swiper-button-prev"></button>
+								<button type="button" class="swiper-button-next"></button>
+								<!-- Если нужен скролбар -->
+								<div class="swiper-scrollbar"></div>
 							</div>
-						</article>
-						<article class="portfolio__item item-portfolio">
-							<a class="item-portfolio__image">
-								<img src="@img" alt="">
-							</a>
-							<div class="item-portfolio__content">
-								<h3 class="item-portfolio__title">Dashboard Website.</h3>
-								<div class="item-portfolio__control control">
-									<a href="" class="control__button">React</a>
-									<a href="" class="control__link_icon-Link:before" ></a>
-								</div>
-							</div>
-						</article>
-						<article class="portfolio__item item-portfolio">
-							<a class="item-portfolio__image">
-								<img src="@img" alt="">
-							</a>
-							<div class="item-portfolio__content">
-								<h3 class="item-portfolio__title">Support Center Website.</h3>
-								<div class="item-portfolio__control control">
-									<a href="" class="control__button">PHP</a>
-									<a href="" class="control__link_icon-Link:before" ></a>
-								</div>
-							</div>
-						</article>
-					</div>
+					</div>								
+				</div>				
+						
+					
+					
 				</section>
 			</main>
 			@@include('html/_footer.htm',{})
@@ -133,24 +177,5 @@
 	</body>
 </html>
 
-<!-- Оболочка слайдера -->
-<div class="имя-блока__slider swiper">
-	<!-- Двигающееся часть слайдера -->
-	<div class="имя-блока__wrapper swiper-wrapper">
-		<!-- Слайд -->
-		<div class="имя-блока__slide swiper-slide"></div>
-	</div>
-	<!-- Если нужна пагинация -->
-	<div class="swiper-pagination"></div>
-	<!-- Если нужна навигация (влево/вправо) -->
-	<button type="button" class="swiper-button-prev"></button>
-	<button type="button" class="swiper-button-next"></button>
-	<!-- Если нужен скролбар -->
-	<div class="swiper-scrollbar"></div>
-</div>
 
-<div class="имя-блока__slider swiper">
-	<div class="имя-блока__wrapper swiper-wrapper">
-		<div class="имя-блока__slide swiper-slide"></div>
-	</div>
-</div>
+

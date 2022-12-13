@@ -226,23 +226,55 @@
     &__top {
         display: flex;
         justify-content: space-between;
+        @media (max-width:$tablet){
+            flex-direction: column;
+        }
     }
 
     &__title-block {
+        @include adaptiveValue("margin-bottom", 144, 30);
     }
 
     &__slider-buttons {
         display: flex;
         align-items: center;
         gap: rem(16);
+        @media (max-width:$tablet){
+            @include adaptiveValue("margin-bottom", 30,20 );
+        }
     }
 
     &__items {
     }
 
     &__item {
+        border: 1px solid #F5F5F5 ;
+    }
+
+    &__slider {
+        @media (max-width: em(460)){
+              margin-right: -15px;
+        }
+    }
+
+    &__wrapper {
+    }
+
+    &__slide {
     }
 }
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+
+.item-portfolio {
+
+   
+}
+
 
 
 .title-block {
@@ -262,6 +294,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &.swiper-button-disabled{
+        opacity: 0.5;
+    }
     
 }
 
@@ -276,8 +312,6 @@
     &__right {
     }
 
-    
-
 		&_left {
             transform: rotate(180deg);
 		}
@@ -286,26 +320,94 @@
 
 .item-portfolio {
 
-    &__image {
+    border-radius:8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &__image-ibg {
+        opacity: 0.5;
+        color:rgba(0, 0, 0, 0.1);
+        padding-bottom: percent(295,361);
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                opacity: 1;
+                img{
+                    transform: scale(1.1);
+                }       
+            }   
+        }
+        @media (any-hover: none){
+            opacity :1;
+        }
+        img{
+            object-position:top;
+            transition: all 0.7s ease 0s;
+        }
     }
 
     &__content {
+        padding: rem(24);
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: rem(16);
+        
     }
 
     &__title {
+        flex: 1 1 100%;
+        font-family: $fontJakarta;
+        font-weight: 500;
+        line-height: math.div(20 ,16 );
+        cursor: pointer;
+        @media (any-hover: hover){
+            &:hover{
+                color: #7E74F1;
+            }
+        }
+        
+
+        // @media (any-hover: hover){
+        //     &:hover{
+                
+        //             color: #7E74F1;
+                
+        //     }
+        // }
     }
 
-    &__control {
-    }
+
+		&__control-button {
+
+            
+		}
+
+		&__control-link {
+            transition: all 0.2s ease 0s;
+            @media (any-hover: hover){
+                &:hover{
+                    color: #7E74F1;
+                }
+            }
+		}
+
+
+
+    
 }
-.control {
 
-    &__button {
-    }
 
-    &__link {
+.test {
 
-        &_icon-Link:before {
+    color:#7E74F1;   
+    @media (any-hover: hover){
+        &:hover{
+            
+                stroke: #7E74F1;
+                // fill: #7E74F1;
+                color:#7E74F1;                       
         }
     }
 }
