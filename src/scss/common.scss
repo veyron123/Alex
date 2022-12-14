@@ -11,7 +11,7 @@
 }
 
 .button {
-	display: inline-flex;
+	display: flex;
 	border: 1px solid #F1F1F1;
 	border-radius: 8px;
 	@media (any-hover: hover) {
