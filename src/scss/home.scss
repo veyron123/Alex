@@ -931,5 +931,215 @@ hr {
 
 
 //====================================================================================================
+.page {
+
+    // .page__path
+
+    &__path {
+    }
+}
+.path {
+
+    // .path__container
+
+    &__container {
+       @include adaptiveValue("padding-bottom",123 ,60 );
+        
+    //    grid-auto-flow: column;
+    }
+
+    // .path__title-block
+
+    &__title-block {
+        margin: 0 auto 0 0;
+    }
+
+
+		// .path__body
+
+		&__body {
+
+            position: relative;
+
+            display: flex;
+            justify-content: space-between;
+            @media (max-width:$tablet){
+                flex-direction: column;
+            }
+
+		}
+
+		// .path__school
+
+		&__school {
+            padding: rem(0) rem(76) rem(0) rem(40);
+            display:grid;
+            @include adaptiveValue("gap", 64, 40);
+            @media (max-width:$tablet){
+                @include adaptiveValue("margin-bottom",30 ,20 );
+            }
+            @media (max-width:$tablet){
+                padding: rem(0) rem(0) rem(0) rem(40);
+            }
+		}
+
+		// .path__skills
+
+		&__skills {
+            max-width: rem(584);
+            display:grid;
+            
+            @include adaptiveValue("gap", 64, 40);
+		}
+}
+.school-path {
+
+		// .school-path__body
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 4px;
+            width: 1px;
+            height: 100%;
+            background-color: #F1F1F1;
+            z-index: 1;
+        }
+
+        
+        
+		
+
+        &__body {
+
+            position: relative;
+            &::before{
+                content:'';
+                position: absolute;
+                z-index: 3;
+                top: 0px;
+                left: -43px;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color: #F1F1F1;
+            }
+            
+            
+            
+           &:last-child{
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -36px;
+                width: 1px;
+                height: 100%;
+                background-color: #FFF;
+                z-index: 2;
+            }
+           }  
+           
+           
+    }
+
+		// .school-path__title
+
+		&__title {
+            
+            font-family: $fontJakarta;
+            font-weight: 500;
+            line-height: math.div(20,16);
+            &:not(:last-child) {margin-bottom: rem(10);}
+            
+            
+           
+		}
+
+		// .school-path__subtitle
+
+		&__subtitle {
+            line-height: math.div(17,14);
+            color: $greyColor;
+            &:not(:last-child) {margin-bottom: rem(24);}
+		}
+
+		// .school-path__date
+
+		&__date {
+            
+            font-weight: 500;
+            line-height: math.div(17 ,14 );
+            // &:last-child{
+            //     &::after{
+            //         content: "";
+            //         position: absolute;
+            //         top: 0;
+            //         left: 0;
+            //         width: 1px;
+            //         height: 100%;
+            //         background-color: #7E74F1;
+            //         z-index: 2;
+            //     }
+            // }
+		}
+}
+.skills-path {
+
+		// .skills-path__text
+
+		&__text {
+            line-height: math.div(32 ,16 );
+            color: $greyColor
+		}
+
+		// .skills-path__body
+
+		&__body {
+            
+		}
+
+        &__wrapper{
+            &:not(:last-child) {@include adaptiveValue("margin-bottom",40 ,20 );}
+        }
+
+		// .skills-path__language
+
+		&__language {
+            font-weight: 500;
+            line-height: math.div(17 ,14 );
+            &:not(:last-child) {@include adaptiveValue("margin-bottom",16 ,8 );}
+		}
+
+        &__line{
+            height: 8px;
+            background: #F5F3FE;
+            border-radius: 0px 2px 2px 0px;
+            &:not(:last-child) {@include adaptiveValue("margin-bottom",40 ,20 );}
+            span{
+                display:block;
+                height: 8px;
+                background-color: $purpleColor;
+                
+            }
+        }
+
+
+}
+.title-block {
+
+    // .title-block__label
+    @include adaptiveValue("margin-bottom",72 ,30 );
+    &__label {
+    }
+
+    // .title-block__value
+
+    &__value {
+    }
+}
+
+
 
 //====================================================================================================
