@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main data-fp  class="page"> 
-				<!-- <section data-fp-section class="page__intro intro">
+				<section data-fp-section class="page__intro intro">
 					<div class="intro__container">
 						<div class="intro__content content-intro">
 							<div class="content-intro__title-block title-block">
@@ -31,7 +31,7 @@
 						</div>				
 					</div>
 				</section>
-				<section data-fp-section class="page__services services">
+				<section data-fp-section data-watch="navigator"  class="page__services services">
 					<div class="services__container __container">
 						<div class="services__title-block title-block">
 							<div class="title-block__label">SERVICES</div>
@@ -62,8 +62,8 @@
 							</article>
 						</div>						
 					</div>
-				</section> -->
-				<!-- <section data-fp-section class="page__portfolio portfolio">
+				</section>
+				<section data-fp-section data-watch="navigator" class="page__portfolio portfolio">
 					<div class="portfolio__container __container">
 						<div class="portfolio__top">
 							<div class="portfolio__title-block title-block">
@@ -158,7 +158,7 @@
 							</div>
 					</div>								
 				</section> -->
-				<!-- <section data-fp-section class="page__career career">
+				 <section data-fp-section class="page__career career">
 					<div data-tabs="768" class="career__container ">
 							<div class="career__title-block title-block">
 								<div class="title-block__label">career path</div>
@@ -292,7 +292,7 @@
 						
 					</div>
 				</section>> -->
-				<!-- <section data-fp-section class="page__articles articles">
+				<section data-fp-section data-watch="navigator" class="page__articles articles">
 					<div class="articles__container">
 						<div class="articles__title-block title-block">
 							<div class="title-block__label">MY ARTICLES</div>
@@ -355,7 +355,7 @@
 						</div>					
 					</div>
 				</section> -->
-				<!-- <section data-fp-section class="page__clients clients">
+				<section data-fp-section class="page__clients clients">
 					<div class="clients__container">
 						<div class="clients__title-block title-block">
 							<div class="title-block__label">MY CLIENTS</div>
@@ -395,7 +395,7 @@
 						</div>
 					</div>
 				</section> -->
-				<section data-fp-section class="page__path path">
+				<section data-fp-section data-watch="navigator" class="page__path path">
 					<div class="path__container __container">
 						<div class="path__title-block title-block">
 							<div class="title-block__label">LEARNING PATH</div>
@@ -446,13 +446,67 @@
 							</div>
 						</div>										
 					</div>
+				</section> -->
+				<section data-fp-section class="page__contacts contacts">
+					<div class="contacts__container __container">
+						<div class="contacts__wrapper">
+							<form action="" class="contacts__form form">
+								<div class="form__item">
+									<input autocomplete="on" type="text" name="form[]" data-required data-error="Enter Name"  placeholder="Name" class="form__input">
+								</div>
+								
+								<div class="form__item">
+									<input autocomplete="on" type="email" name="form[]" data-required="email" data-error="Wrong email"  placeholder="Email" class="form__input">
+								</div>
+								<div class="form__item">
+									<textarea name="" class="form__text-area" id=""  placeholder="Message"></textarea>
+								</div>
+								<div class="form__item">
+									<button type="submit" class="form__button">Send Message</button>
+								</div>
+							</form>
+							<div class="contacts__body body-contacts">
+								<ul class="body-contacts__list">
+									<li class="body-contacts__item item-contacts">
+										<div class="item-contacts__image">
+											<img src="@img/form-icons/pin.svg" alt="">
+										</div>
+										<div class="item-contacts__content">
+											<div class="item-contacts__label">Address</div>
+											<a href="#" class="item-contacts__value">3424 Layman Avenue, Fayetteville, NC</a>
+										</div>
+									</li>
+									<li class="body-contacts__item item-contacts">
+										<div class="item-contacts__image">
+											<img src="@img/form-icons/pin.svg" alt="">
+										</div>
+										<div class="item-contacts__content">
+											<div class="item-contacts__label">Phone</div>
+											<a type="tel:5014141541" class="item-contacts__value">(501) 414-1541</a>
+										</div>
+									</li>
+									<li class="body-contacts__item item-contacts">
+										<div class="item-contacts__image">
+											<img src="@img/form-icons/pin.svg" alt="">
+										</div>
+										<div class="item-contacts__content content">
+											<div class="item-contacts__label">Email</div>
+											<a type="mailto:devchapter@gmail.com" class="item-contacts__value">devchapter@gmail.com</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						@@include('html/_footer.htm',{})
+					</div>
 				</section>
 			</main>
-			@@include('html/_footer.htm',{})
+			
 		</div>
 		@@include('html/_js.htm',{})
 	</body>
 </html>
+
 
 
 
