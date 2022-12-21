@@ -46,8 +46,12 @@
 			}
 		}
 		.menu-open & {
-			&:hover{
 				background: $mainColor;
+				color:$whiteBackgroundColor;
+			&:hover{
+				border: 1px solid black;
+				background: $whiteBackgroundColor;
+				color:$mainColor;
 			}		
 		}
 	}
